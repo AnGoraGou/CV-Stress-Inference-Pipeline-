@@ -9,6 +9,16 @@ physiological and behavioral signals extracted from facial video.
 - Physiological: Remote Photoplethysmography (rPPG) from forehead ROI
 - Behavioral: Eye Aspect Ratio (EAR) based blink rate
 
+## MediaPipe Model Setup
+
+This project uses the MediaPipe Tasks API.
+The face landmark model must be downloaded separately:
+
+```bash
+wget https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task \
+     -O models/face_landmarker.task
+```
+
 ## Stress Index Logic
 Both signals are normalized and fused into a single Stress Index (0–100):
 
